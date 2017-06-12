@@ -15,6 +15,11 @@ namespace JsonApiClient
             Console.Write("Enter a zip code: ");
             string zipCode = Console.ReadLine();
 
+            if (zipCode.Equals("")) {
+                zipCode = "17601";
+            }
+            Console.WriteLine("");
+
             string jsonCurrentWeather = AccessWebPage.HttpGet("http://api.openweathermap.org/data/2.5/weather?q=" + zipCode + "&APPID=47992ad1b3261b707350bf13aac83023");
             DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(WeatherData.CurrentRoot));
 
@@ -27,9 +32,22 @@ namespace JsonApiClient
             
             Console.WriteLine("Do you want your temperature in Fahrenheit(F), Celcius(C), or Kelvin(K)");
             string choice = Console.ReadLine().ToLower();
-            
+            Console.WriteLine("");
+
+            if (choice.Equals("")) {
+                choice = "f";
+            }
+            ConverTimeTo convertTime = new ConverTimeTo();
+
             weatherFormatChoice(choice, root);
-            
+
+            Console.WriteLine("Sunrise: {0}. Sunset: {1}", convertTime.FromUnixTime(root.sys.sunrise), convertTime.FromUnixTime(root.sys.sunset));
+            string finalReadLine = Console.ReadLine();
+
+            if (finalReadLine == "help") {
+                Console.WriteLine("You can type: settings, to go back to the settings.");
+                Console.ReadLine();
+            }
         }
 
         public void weatherFormatChoice(string choice, WeatherData.CurrentRoot theRoot)
@@ -43,7 +61,6 @@ namespace JsonApiClient
 
                 Console.WriteLine("Weather outside is: {0}", fahrenheit);
                 Console.WriteLine("Temperature min: {0}. Temperature max: {1}", convertTempTo.Fahrenheit(theRoot.main.temp_min), convertTempTo.Fahrenheit(theRoot.main.temp_max));
-                Console.ReadLine();
             }
             if (choice.Equals("c"))
             {
@@ -54,15 +71,13 @@ namespace JsonApiClient
 
                 Console.WriteLine("Weather outside is: {0}", celcius);
                 Console.WriteLine("Temperature min: {0}. Temperature max: {1}", convertTempTo.Celcius(theRoot.main.temp_min), convertTempTo.Celcius(theRoot.main.temp_max));
-                Console.ReadLine();
             }
-            else
+            if(choice.Equals("k"))
             {
                 double kelvin = theRoot.main.temp;
 
                 Console.WriteLine("(Default: K) Weather outside is: {0}", kelvin);
                 Console.WriteLine("Temperature min: {0}. Temperature max: {1}", theRoot.main.temp_min, theRoot.main.temp_max);
-                Console.ReadLine();
             }
         }
         public static Stream GenerateStreamFromString(string s)

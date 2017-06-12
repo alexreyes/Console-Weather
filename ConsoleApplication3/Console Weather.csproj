@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessWebPage.cs" />
+    <Compile Include="ConverTimeTo.cs" />
     <Compile Include="ConvertTempTo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
