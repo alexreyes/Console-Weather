@@ -5,11 +5,11 @@ using System.Net.Http.Headers;
 
 namespace JsonApiClient
 {
-    public static class Program
+    public class Program
     {
         public static void Main(String[] args) {
-            WeatherApiClient.GetWeatherForecast();
-            Console.ReadLine();
+            WeatherApiClient weatherClient = new WeatherApiClient();
+            weatherClient.GetWeatherForecast();          
         }
     }
 }
