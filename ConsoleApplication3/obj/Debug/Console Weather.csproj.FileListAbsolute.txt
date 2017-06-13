@@ -8,3 +8,13 @@ c:\users\alex.reyes\documents\visual studio 2015\Projects\ConsoleApplication3\Co
 c:\users\alex.reyes\documents\visual studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\obj\Debug\Console Weather.csprojResolveAssemblyReference.cache
 c:\users\alex.reyes\documents\visual studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.exe
 c:\users\alex.reyes\documents\visual studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.pdb
+C:\Users\alex.reyes\Documents\Visual Studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\EntityFramework.dll
+C:\Users\alex.reyes\Documents\Visual Studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\alex.reyes\Documents\Visual Studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\System.Data.SQLite.dll
+C:\Users\alex.reyes\Documents\Visual Studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\alex.reyes\Documents\Visual Studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\alex.reyes\Documents\Visual Studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\EntityFramework.xml
+C:\Users\alex.reyes\Documents\Visual Studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\alex.reyes\Documents\Visual Studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\System.Data.SQLite.xml
+C:\Users\alex.reyes\Documents\Visual Studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\Telegram.Bot.dll
+C:\Users\alex.reyes\Documents\Visual Studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\Telegram.Bot.xml
