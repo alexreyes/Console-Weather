@@ -40,7 +40,7 @@ namespace JsonApiClient
 
             }
 
-            string jsonCurrentWeather = AccessWebPage.HttpGet("http://api.openweathermap.org/data/2.5/weather?q=" + zipCode + "&APPID=47992ad1b3261b707350bf13aac83023");
+            string jsonCurrentWeather = AccessWebPage.HttpGet("http://api.openweathermap.org/data/2.5/weather?q=" + zipCode + "&APPID=YOUR API KEY");
             DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(WeatherData.CurrentRoot));
 
             using (Stream s = GenerateStreamFromString(jsonCurrentWeather))
@@ -86,16 +86,6 @@ namespace JsonApiClient
                 ExtraStuff helpPage = new ExtraStuff();
                 helpPage.helpPage();
             }
-        }
-
-        public static void GetWeatherForecastAsync()
-        {
-            var url = AccessWebPage.HttpGet("http://api.openweathermap.org/data/2.5/weather?q=" + "17601" + "&APPID=47992ad1b3261b707350bf13aac83023");
-
-            var asyncClient = new WebClient();
-            asyncClient.DownloadStringCompleted += asyncClient_DownloadStringCompleted;
-            asyncClient.DownloadStringAsync(new Uri(url));
-
         }
 
         static void asyncClient_DownloadStringCompleted(object sender, DownloadStringCompletedEventArgs e)
